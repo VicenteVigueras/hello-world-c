@@ -51,5 +51,29 @@ int main() {
     ----------
     */
 
+    // Exercise 3 - Memory Addresses and Pointers
+    int number = 42;
+    int *numberPtr = &number;
+
+    printf("Value of number: %d\n", number);
+    printf("Address of number: %p\n", (void*)&number);
+    printf("Pointer value (address): %p\n", (void*)numberPtr);
+    printf("Value via pointer: %d\n", *numberPtr);
+
+    /*
+    ---------
+    Output (addresses will differ):
+    ---------
+    Value of number: 42
+    Address of number: 0x7ffee3b2a6bc
+    Pointer value (address): 0x7ffee3b2a6bc
+    Value via pointer: 42
+
+    Conclusion:
+    - A pointer stores a memory address
+    - Dereferencing (*) accesses the value at that address
+    ----------
+    */
+
     return 0; // Indicates that the program ended successfully
 }
