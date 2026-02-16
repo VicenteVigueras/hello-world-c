@@ -21,14 +21,61 @@ int divide(int a, int b) {
 }
 
 int main() {
-    int sum = add(1,2);
-    int difference = subtract(1,2);
-    int product = multiply(1,2);
-    int quotient = divide(1,2);
-    printf("The sum is: %d\n", sum);
-    printf("The difference is: %d\n", difference);
-    printf("The product is: %d\n", product);
-    printf("The quotient is: %d\n", quotient);
+    int input;
+    int a;
+    int b;
+    while(1) {
+        printf("====================\n");
+        printf("1. Add\n");
+        printf("2. Subtract\n");
+        printf("3. Multiply\n");
+        printf("4. Divide\n");
+        printf("0. Exit\n");
+        printf(">> ");
+        scanf("%d", &input);
+    
+        if(input == 0) {
+            break;
+        }
+
+        if(input == 1) {
+            printf("Select A: ");
+            scanf("%d", &a);
+            printf("Select B: ");
+            scanf("%d", &b);
+            int sum = add(a,b);
+            printf("The sum is: %d\n", sum);
+        }
+
+        if(input == 2) {
+            printf("Select A: ");
+            scanf("%d", &a);
+            printf("Select B: ");
+            scanf("%d", &b);
+            int sum = subtract(a,b);
+            printf("The difference is: %d\n", sum);
+        }
+
+
+        if(input == 3) {
+            printf("Select A: ");
+            scanf("%d", &a);
+            printf("Select B: ");
+            scanf("%d", &b);
+            int sum = multiply(a,b);
+            printf("The product is: %d\n", sum);
+        }
+
+        if(input == 4) {
+            printf("Select A: ");
+            scanf("%d", &a);
+            printf("Select B: ");
+            scanf("%d", &b);
+            int sum = divide(a,b);
+            printf("The quotient is: %d\n", sum);
+        }
+    }
+    printf("====================\n");
     return 0;
 }
 
